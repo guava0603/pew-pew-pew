@@ -85,6 +85,7 @@ var mainState = {
     game.load.image('blood', 'assets/blood.png');
 
     game.load.audio('birds', 'assets/sound/birds.wav');
+    game.load.audio('ah_me', 'assets/sound/ah_me.wav');
   },
 
   create: function() {
@@ -233,11 +234,7 @@ var mainState = {
     this.volume_on.anchor.setTo(0.5, 0.5);
     this.volume_on.scale.setTo(0.8, 0.8);
     this.volume_on.inputEnabled = true;
-    this.volume_on.events.onInputDown.add(function() {
-      this.volume_off.visible = true;
-      this.volume_on.visible = false;
-      this.cur_volume = 0;
-    });
+    this.volume_on.events.onInputDown.add(this.off_music, this);
 
     this.volume_off = game.add.image(20, game.height - 20, 'off');
     this.volume_off.anchor.setTo(0.5, 0.5);
@@ -283,6 +280,12 @@ var mainState = {
     this.volume_off.visible = false;
     this.volume_on.visible = true;
     this.cur_volume = this.tmp_volume;
+  },
+
+  off_music() {
+    this.volume_off.visible = true;
+    this.volume_on.visible = false;
+    this.cur_volume = 0;
   },
 
   generateFruits: function(idx) {
@@ -501,6 +504,7 @@ var mainState = {
   },
 
   enemyHitsPlayer(player, bullet) {
+    var ah = game.sound.play('ah_me', this.cur_volume);
     bullet.kill();
 
     live = this.lives.getFirstAlive();
