@@ -163,7 +163,7 @@ var mainState = {
 
     //  An explosion pool
     this.explosions = game.add.group();
-    this.explosions.createMultiple(10, 'kaboom');
+    this.explosions.createMultiple(50, 'kaboom');
     this.explosions.forEach(exp => {
       exp.anchor.x = 0.5;
       exp.anchor.y = 0.5;
