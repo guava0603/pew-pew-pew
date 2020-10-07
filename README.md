@@ -1,6 +1,6 @@
-# Software Studio 2019 Spring Assignment 02 Raiden
+# Pew Pew Pew!
 
-## Scoring
+## Software Studio 2019 Spring Assignment 02 Raiden
 
 | Component                   | Score | Y/N |
 * Basic Components
@@ -63,3 +63,5 @@
 [背景是做成有深度的背景，前方跑的速度比較快所以有立體感]
 [吃到「羽毛」圖案的加速物品就會啟動，在啟動的這5秒移動速度會變為原先的2倍]
 [吃到「愛心」圖案的回血物品就會補1顆心]
+
+Demo link on gitlab: https://106062226.gitlab.io/assignment_02/
