@@ -1,6 +1,6 @@
 # Pew Pew Pew!
 
-## Software Studio 2019 Spring Assignment 02 Raiden
+## Software Studio 2019 Spring Assignment 02
 
 ### Introduction
 
